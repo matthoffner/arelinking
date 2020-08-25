@@ -16,7 +16,7 @@ const getLinks = (domainMatch, uri, depth) => {
         }
         const verified = linkMatch(domainMatch, links);
         if (verified) {
-            console.log(`${uri} has a porch link`);
+            console.log(`${uri} has a ${domain} link`);
             return;
         } else {
             const relative = relativeLinks(links, domain);
@@ -31,7 +31,7 @@ const getLinks = (domainMatch, uri, depth) => {
                     }
                     const verified = linkMatch(domainMatch, links);
                     if (verified) {
-                        console.log(`${relativeLink} has a porch link`);
+                        console.log(`${relativeLink} has a ${domain} link`);
                         return;
                     }  
                 })
